@@ -126,6 +126,7 @@ class MainActivity : AppCompatActivity() {
     /** OnClick listener for Stop button in activity_main.xml */
     fun stopVideo(view: View) {
         mCastSession?.remoteMediaClient?.stop()
+        SimpleWebServer.stopServer()
     }
 
     /**
@@ -157,7 +158,7 @@ class MainActivity : AppCompatActivity() {
         movieMetadata.addImage(WebImage(Uri.parse(testImageUrl1))) // Required first image (low-res)
         movieMetadata.addImage(WebImage(Uri.parse(testImageUrl2))) // Required second image (high-res)
 
-        /** Setting a subtitle track, You can add more subtitle
+        /** (Optional) Setting a subtitle track, You can add more subtitle
          *  track by using this builder. */
         val mediaTrack = MediaTrack.Builder(1, MediaTrack.TYPE_TEXT)
             .setName("English")
@@ -171,7 +172,7 @@ class MainActivity : AppCompatActivity() {
             .setContentType("videos/mp4")
             .setMetadata(movieMetadata)
             .setStreamDuration(333 * 1000) // 5:33 means 333 seconds
-            .setMediaTracks(listOf(mediaTrack)) // Set list of subtitles.
+            .setMediaTracks(listOf(mediaTrack)) // (Optional) Set list of subtitles.
             .build()
     }
 
@@ -240,8 +241,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
-        /** Stop http server in any case user directly closed the app. */
-        stopService(Intent(this, WebService::class.java))
+        /** Stop http server in any case user directly close the app from recents. */
+        SimpleWebServer.stopServer()
         super.onDestroy()
     }
 
