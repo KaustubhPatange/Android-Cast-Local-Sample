@@ -1,5 +1,7 @@
 # Android-Cast-Local-Sample
 
+![build](https://github.com/KaustubhPatange/Android-Cast-Local-Sample/workflows/build/badge.svg)
+
 The sample showcase the usage of [Cask-SDK](https://developers.google.com/cast) to create an Android sender app which plays local device media files on chromecast enabled devices.
 
 > _This sample demonstrates playing of a local media file along with a subtitle track on chromecast enabled device._
