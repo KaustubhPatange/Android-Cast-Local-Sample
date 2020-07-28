@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CastSdkSample</string>
+    <string name="subtitle_path">Subtitle path</string>
+    <string name="start">Play</string>
+    <string name="stop">Stop</string>
+    <string name="media_route_menu_title">Play On</string>
+</resources>

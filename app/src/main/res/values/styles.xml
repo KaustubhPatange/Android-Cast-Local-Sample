@@ -1,0 +1,17 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- You can customize the ExpandedControlsActivity style here
+         @see https://developers.google.com/cast/docs/android_sender/customize_ui
+     -->
+    <style name="Theme.CastVideosDark" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
+
+</resources>
