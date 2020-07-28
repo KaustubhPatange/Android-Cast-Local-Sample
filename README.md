@@ -54,14 +54,14 @@ git clone https://github.com/KaustubhPatange/Android-Cast-Local-Sample.git
 
 If you are building your own sender app, instead of copying the whole [tinyhttpd](https://github.com/dddge/TinyDroidHttpd) module you can add the following dependencies to your build.gradle files.
 
-This dependency will make [SimpleWebServer](https://github.com/KaustubhPatange/Android-Cast-Local-Sample/blob/master/app/tinyhttpd/src/main/java/io/github/dkbai/tinyhttpd/nanohttpd/webserver/SimpleWebServer.java) class available for use.
+This dependencies will make [SimpleWebServer](https://github.com/KaustubhPatange/Android-Cast-Local-Sample/blob/master/app/tinyhttpd/src/main/java/io/github/dkbai/tinyhttpd/nanohttpd/webserver/SimpleWebServer.java) class available for use.
 
 ```gradle
 allprojects {
-	repositories {
-		...
-		maven { url 'https://jitpack.io' }
-	}
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
 }
 ```
 
